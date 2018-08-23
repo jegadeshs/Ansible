@@ -22,8 +22,13 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 ### Playbook
 
 Use it in a playbook as follows:
-```yaml
+
 ---
 - hosts: '{{ target }}'
   roles:
     - role: '{{ location }}'
+
+### Execute
+
+---
+$ ansible-playbook run.yml --extra-vars "target=127.0.0.1 location=Prometheus/node_exporter"
